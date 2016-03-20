@@ -11,6 +11,9 @@
 		F778C7791C9AEBFA0063ED08 /* KVObservable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F778C76E1C9AEBFA0063ED08 /* KVObservable.framework */; };
 		F778C77E1C9AEBFA0063ED08 /* KVObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778C77D1C9AEBFA0063ED08 /* KVObservableTests.swift */; };
 		F778C7891C9AEC5D0063ED08 /* KVObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778C7881C9AEC5D0063ED08 /* KVObservable.swift */; };
+		F778C78B1C9EDC090063ED08 /* KeyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778C78A1C9EDC090063ED08 /* KeyObserver.swift */; };
+		F778C78D1C9EDC330063ED08 /* ProxyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778C78C1C9EDC330063ED08 /* ProxyObserver.swift */; };
+		F778C78F1C9EDC640063ED08 /* TargetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778C78E1C9EDC640063ED08 /* TargetObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,9 @@
 		F778C77D1C9AEBFA0063ED08 /* KVObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVObservableTests.swift; sourceTree = "<group>"; };
 		F778C77F1C9AEBFA0063ED08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F778C7881C9AEC5D0063ED08 /* KVObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVObservable.swift; sourceTree = "<group>"; };
+		F778C78A1C9EDC090063ED08 /* KeyObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyObserver.swift; sourceTree = "<group>"; };
+		F778C78C1C9EDC330063ED08 /* ProxyObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyObserver.swift; sourceTree = "<group>"; };
+		F778C78E1C9EDC640063ED08 /* TargetObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 			children = (
 				F778C7711C9AEBFA0063ED08 /* KVObservable.h */,
 				F778C7881C9AEC5D0063ED08 /* KVObservable.swift */,
+				F778C78A1C9EDC090063ED08 /* KeyObserver.swift */,
+				F778C78C1C9EDC330063ED08 /* ProxyObserver.swift */,
+				F778C78E1C9EDC640063ED08 /* TargetObserver.swift */,
 				F778C7731C9AEBFA0063ED08 /* Info.plist */,
 			);
 			path = KVObservable;
@@ -197,7 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F778C78D1C9EDC330063ED08 /* ProxyObserver.swift in Sources */,
 				F778C7891C9AEC5D0063ED08 /* KVObservable.swift in Sources */,
+				F778C78F1C9EDC640063ED08 /* TargetObserver.swift in Sources */,
+				F778C78B1C9EDC090063ED08 /* KeyObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
