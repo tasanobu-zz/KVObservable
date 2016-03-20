@@ -12,25 +12,20 @@ public protocol KeyObserverType: class {
     typealias Target: NSObject
     typealias Value
     
-    var keyPath: String { get }
-    var target: Target { get }
-    var valueChangeHandler: (old: Value?, new: Value?) -> () { get }
+    init(target: Target, keyPath: String, handler: (old: Value?, new: Value?) -> ())
 }
 
 public final class AnyKeyObserver<Target: NSObject, Value>: KeyObserverType {
-    
-    public let target: Target
-    public let keyPath: String
-    public let valueChangeHandler: (old: Value?, new: Value?) -> ()
+
+    private let valueChangeHandler: ((old: Value?, new: Value?) -> ())
     
     private let proxy: ProxyObserver
     
-    public init<Inner: KeyObserverType where Target == Inner.Target, Value == Inner.Value>(_ inner: Inner) {
-        self.target = inner.target
-        self.keyPath = inner.keyPath
-        self.valueChangeHandler = inner.valueChangeHandler
+    public init(target: Target, keyPath: String, handler: (old: Value?, new: Value?) -> ()) {
         
-        proxy = ProxyObserver(keyPaths: [inner.keyPath], target: inner.target)
+        self.valueChangeHandler = handler
+        
+        proxy = ProxyObserver(keyPaths: [keyPath], target: target)
         proxy.delegate = self
         proxy.resume()
     }
