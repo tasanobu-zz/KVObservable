@@ -27,19 +27,17 @@ final class ProxyObserver: NSObject {
         stop()
     }
     
-    func resume() -> Self {
+    func resume() {
         let options: NSKeyValueObservingOptions = [.New, .Old]
         for key in keyPaths {
             target.addObserver(self, forKeyPath: key, options: options, context: nil)
         }
-        return self
     }
     
-    func stop() -> Self  {
+    func stop()  {
         for key in keyPaths {
             target.removeObserver(self, forKeyPath: key)
         }
-        return self
     }
     
     // MARK: KVO
